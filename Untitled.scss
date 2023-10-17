@@ -1,3 +1,99 @@
-.test{
-    background-color: red;
+$main-color : #0d1722;
+$section-color : #0e263a;
+$line-color: #7ed1e240;
+$text-color : #7ed1e2;
+
+body{
+    font-family: arial;
+    color: $text-color;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0px;
+}
+.banner{
+    height: 400px;
+    background-position: 20% 20%;
+    background-size: cover;
+    background-image: url("images/banner-ffx.jpg");
+}
+.section{
+    background-color: $section-color;
+}
+.line{
+    height: 1px;
+    background-color: $line-color;
+}
+.title{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.main{
+    gap: 20px;
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    .section{
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.detail-line{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    .hi{
+        width: 15%;
+        font-size: clamp(20px, 50%, 30px);
+    }
+    .details{
+        color: $main-color;
+        display: flex;
+        justify-content: space-around;
+        width: 95%;
+        font-size: clamp(20px, 50%, 30px);
+    }
+}
+
+.dear-x{
+    border: 1px solid $section-color;
+    padding: 15px;
+    font-size: 14px;
+    .cross-out{
+        text-decoration: line-through;
+    }
+}
+
+.image-cont{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 15px;
+    .img{
+        width: 40%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        &.img-1{
+            background-image: url(images/pizza.jpg);
+        }
+        &.img-2{
+            background-image: url(images/mirror.jpg);
+        }
+        &.img-3{
+            background-image: url(images/ast.jpg);
+            background-position: 50% 33%;
+        }
+        &.img-4{
+            background-image: url(images/genshin.jpg);
+        }
+        &.img-5{
+            background-image: url(images/red.jpg);
+        }
+    }
 }
